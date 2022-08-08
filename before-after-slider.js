@@ -25,12 +25,12 @@ document.body.addEventListener('mousemove',function(e){
   if (!active) return;
   // Their mouse is here...
   let x = e.pageX;
-  x -= document.querySelector('.wrapper').getBoundingClientRect().left;
+  x -= document.querySelector('.wrapper__before-after-slider').getBoundingClientRect().left;
   scrollIt(x);
 });
 
 function scrollIt(x){
-    let transform = Math.max(0,(Math.min(x,document.querySelector('.wrapper').offsetWidth)));
+    let transform = Math.max(0,(Math.min(x,document.querySelector('.wrapper__before-after-slider').offsetWidth)));
     document.querySelector('.after').style.width = transform+"px";
     document.querySelector('.scroller').style.left = transform-25+"px";
 }
